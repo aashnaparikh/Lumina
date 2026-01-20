@@ -1,4 +1,4 @@
-# 🧬 Bio-Architect
+# 🧬 Lumina : The Bio-Architect
 
 AI-powered longevity simulator that analyzes multi-source health data to predict and optimize your future self.
 

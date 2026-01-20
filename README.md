@@ -84,10 +84,3 @@ dist/
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-npm-debug.log*
-
-# API Keys (NEVER commit these!)
-**/secrets/
-**/.env*

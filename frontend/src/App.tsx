@@ -1,9 +1,26 @@
 import { useState } from 'react'
 import { Sparkles, Activity, Brain, Heart } from 'lucide-react'
+import NutritionAnalyzer from './components/NutritionAnalyzer'
 import './App.css'
 
 function App() {
-  const [isHovered, setIsHovered] = useState(false)
+  const [showDemo, setShowDemo] = useState(false)
+
+  if (showDemo) {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-4">
+        <div className="max-w-6xl w-full">
+          <button
+            onClick={() => setShowDemo(false)}
+            className="mb-6 text-white/60 hover:text-white transition-colors"
+          >
+            ← Back to Home
+          </button>
+          <NutritionAnalyzer />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
@@ -25,13 +42,12 @@ function App() {
           </p>
 
           <button
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            onClick={() => setShowDemo(true)}
             className="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg 
                      hover:bg-purple-50 transition-all duration-300 shadow-2xl hover:shadow-purple-500/50
                      transform hover:scale-105"
           >
-            {isHovered ? '🚀 Coming Soon' : '✨ Explore Demo'}
+            ✨ Try Vision Agent
           </button>
         </div>
 
